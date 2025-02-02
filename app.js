@@ -7,8 +7,9 @@ let amigosSorteados =[];
 //Adiciona um amigo a lista quando o botão "Adicionar" é utilizado
 function adicionarAmigo() {
     let nome = document.getElementById("amigo").value.trim();
-    if (!isNaN(nome) || nome === "") {
-        alert ('É necessário inserir um nome válido.');
+    if (!isNaN(nome) || nome === "" || amigos.includes(nome)) {
+        alert ('É necessário inserir um nome válido e não repetido.');
+        limparCampo();
     } else {
         amigos.push(nome);
         alterarTexto('h2',`Você adicionou ${nome} a sua lista do amigo secreto.`); 
