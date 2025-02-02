@@ -153,6 +153,19 @@ ul {
     font-size: 16px;
 }
 
+.button-draw:disabled {
+    background-color: #808080; 
+    color: #ccc;
+    cursor: not-allowed;
+}
+
+.button-draw:disabled:hover,
+.button-draw:disabled:focus {
+    background-color: #808080; 
+    color: #ccc; 
+    cursor: not-allowed;
+}
+
 .button-draw img {
     margin-right: 40px;
 }
